@@ -1,11 +1,11 @@
 lazy val commonSettings = Seq(
   organization in ThisBuild := "com.github.saurfang",
-  scalaVersion := "2.10.5",
-  javacOptions ++= Seq("-source", "1.7", "-target", "1.7"),
-  scalacOptions ++= Seq("-target:jvm-1.7", "-deprecation", "-feature"),
+  scalaVersion := "2.10.7",
+  javacOptions ++= Seq("-source", "1.8", "-target", "1.8"),
+  scalacOptions ++= Seq("-deprecation", "-feature"),
   libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % "test",
   git.useGitDescribe := true,
-  crossSbtVersions := List("0.13.16", "1.0.2")
+  crossSbtVersions := List("0.13.16", "1.1.1")
 )
 
 lazy val root = (project in file(".")).
