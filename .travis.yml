@@ -2,15 +2,21 @@ language: scala
 jdk:
   - oraclejdk8
 sudo: false
+
+before_cache:
+  - find $HOME/.ivy2 -name "ivydata-*.properties" -delete
+  - find $HOME/.sbt -name "*.lock" -delete
+
 cache:
   directories:
-    - $HOME/.ivy2/cache
-    - $HOME/.sbt/boot/
+    - $HOME/.m2
+    - $HOME/.ivy2
+    - $HOME/.sbt/boot
+    - $HOME/.sbt/launchers
+
 script:
   - sbt -jvm-opts travis/jvmopts.compile "^ compile"
   - sbt -jvm-opts travis/jvmopts.test test "^ scripted"
-  - find $HOME/.sbt -name "*.lock" | xargs rm
-  - find $HOME/.ivy2 -name "ivydata-*.properties" | xargs rm
 
 deploy:
   provider: script
