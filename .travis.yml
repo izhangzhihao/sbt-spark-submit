@@ -11,3 +11,10 @@ script:
   - sbt -jvm-opts travis/jvmopts.test test "^ scripted"
   - find $HOME/.sbt -name "*.lock" | xargs rm
   - find $HOME/.ivy2 -name "ivydata-*.properties" | xargs rm
+
+deploy:
+  provider: script
+  script: sbt publish
+  on:
+    tags: true
+    all_branches: true
