@@ -72,7 +72,7 @@ use cases. Please see [below](#define-custom-sparksubmit-task) for more details 
 For sbt 0.13.6+ add sbt-spark-submit to your `project/plugins.sbt` or `~/.sbt/0.13/plugins/plugins.sbt` file:
 
 ```scala
-addSbtPlugin("com.github.saurfang" % "sbt-spark-submit" % "0.0.4")
+addSbtPlugin("com.github.izhangzhihao" % "sbt-spark-submit" % "0.0.4")
 ```
 
 Naturally you will need to have spark dependency in your project itself such as:

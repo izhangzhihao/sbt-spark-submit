@@ -1,5 +1,5 @@
 lazy val commonSettings = Seq(
-  organization in ThisBuild := "com.github.saurfang",
+  organization in ThisBuild := "com.github.izhangzhihao",
   scalaVersion := "2.10.7",
   javacOptions ++= Seq("-source", "1.8", "-target", "1.8"),
   scalacOptions ++= Seq("-deprecation", "-feature"),
@@ -16,9 +16,7 @@ lazy val root = (project in file(".")).
     name := "sbt-spark-submit",
     licenses += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html")),
     publishMavenStyle := false,
-    bintrayRepository := {
-      if(isSnapshot.value) "sbt-plugin-snapshots" else "sbt-plugin-releases"
-    },
+    bintrayRepository := "sbt-plugin-releases",
     bintrayOrganization := None
   ).
   settings(scriptedSettings: _*).
