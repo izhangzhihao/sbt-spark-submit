@@ -1,8 +1,6 @@
 # sbt-spark-submit
 
-[![Join the chat at https://gitter.im/saurfang/sbt-spark-submit](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/saurfang/sbt-spark-submit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-[![Build Status](https://travis-ci.org/saurfang/sbt-spark-submit.svg?branch=master)](https://travis-ci.org/saurfang/sbt-spark-submit)
+[![Download](https://api.bintray.com/packages/izhangzhihao/sbt-plugin-releases/sbt-spark-submit/images/download.svg) ](https://bintray.com/izhangzhihao/sbt-plugin-releases/sbt-spark-submit/_latestVersion) [![Build Status](https://travis-ci.org/izhangzhihao/sbt-spark-submit.svg?branch=master)](https://travis-ci.org/izhangzhihao/sbt-spark-submit)
 
 This sbt plugin provides customizable sbt tasks to fire Spark jobs against local or remote Spark clusters.
 It allows you submit Spark applications without leaving your favorite development environment.
@@ -69,10 +67,10 @@ use cases. Please see [below](#define-custom-sparksubmit-task) for more details 
 
 ## Setup
 
-For sbt 0.13.6+ add sbt-spark-submit to your `project/plugins.sbt` or `~/.sbt/0.13/plugins/plugins.sbt` file:
+For sbt 0.13.6+ & 1.x add sbt-spark-submit to your `project/plugins.sbt` or `~/.sbt/0.13 or 1.0/plugins/plugins.sbt` file:
 
 ```scala
-addSbtPlugin("com.github.izhangzhihao" % "sbt-spark-submit" % "0.0.4")
+addSbtPlugin("com.github.izhangzhihao" % "sbt-spark-submit" % "0.0.5")
 ```
 
 Naturally you will need to have spark dependency in your project itself such as:
