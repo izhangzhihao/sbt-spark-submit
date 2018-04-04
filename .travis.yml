@@ -20,7 +20,7 @@ script:
 
 deploy:
   provider: script
-  script: sbt publish
+  script: sbt publish & sbt ^^1.0.0 publish
   on:
     tags: true
     all_branches: true
